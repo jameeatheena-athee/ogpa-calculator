@@ -1,0 +1,103 @@
+/* ===== Base Styles ===== */
+* { box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #eef2f6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  background: linear-gradient(90deg, #007bff, #00b7ff);
+  color: #fff;
+  font-size: 1.8rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+/* ===== Table ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+th, td {
+  padding: 12px;
+  text-align: center;
+}
+thead tr {
+  background: #007bff;
+  color: #fff;
+}
+tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+tbody tr:hover {
+  background: #f1f8ff;
+}
+input {
+  width: 90%;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.2);
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.btn-remove {
+  background: #ff4d4d;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+.btn-remove:hover { background: #cc0000; }
+
+/* ===== Result ===== */
+#result {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 15px;
+  background: #f1f8ff;
+  border-radius: 10px;
+  color: #007bff;
+}
+
+@media (max-width: 600px) {
+  th, td { font-size: 0.9rem; padding: 8px; }
+  .btn { width: 100%; margin: 5px 0; }
+}

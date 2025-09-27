@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OGPA Calculator (Theory + Practical)</title>
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- PWA Setup -->
+  <link rel="manifest" href="manifest.json">
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</head>
+<body>
+  <h1>OGPA Calculator (Theory + Practical)</h1>
+  <div class="container">
+    <table id="ogpaTable">
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Theory Hours</th>
+          <th>Practical Hours</th>
+          <th>Grade Point (0–10)</th>
+          <th>Remove</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="text" placeholder="Subject Name"></td>
+          <td><input type="number" placeholder="Theory" min="0"></td>
+          <td><input type="number" placeholder="Practical" min="0"></td>
+          <td><input type="number" placeholder="Grade Point" min="0" max="10"></td>
+          <td><button class="btn btn-remove" onclick="removeRow(this)">X</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button class="btn" onclick="addRow()">Add Subject</button>
+    <button class="btn" onclick="calculateOGPA()">Calculate OGPA</button>
+
+    <div id="result"></div>
+  </div>
+
+  <!-- Link JS -->
+  <script src="script.js"></script>
+</body>
+</html>
